@@ -1,25 +1,12 @@
-import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
+import { User } from '../../api/User';
 
-function Users({ users }) {
-  // const [users, setUsers] = useState([]);
+export interface UsersProps {
+  users?: User;
+}
 
-  // const fetchUsers = async () => {
-  //   const response = await axios.get(
-  //     'https://jsonplaceholder.typicode.com/users'
-  //   );
-  //   const data = await response.data;
-
-  //   setUsers(data);
-  // };
-
-  // console.log(users);
-
-  // useEffect(() => {
-  //   fetchUsers();
-  // }, []);
-
+function Users({ users }: UsersProps) {
   return (
     <div>
       {users.map((user) => (
